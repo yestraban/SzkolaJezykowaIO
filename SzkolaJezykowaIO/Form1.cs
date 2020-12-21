@@ -15,6 +15,10 @@ namespace SzkolaJezykowaIO
         public Form1()
         {
             InitializeComponent();
+            MessageBox.Show("nie dziala");
+            MessageBox.Show("nie dziala, ale lepiej");
+            MessageBox.Show("nie dziala najlepiej!")
+
         }
     }
 }
