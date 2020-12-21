@@ -1,0 +1,9 @@
+C:\Users\Dominik\source\repos\SzkolaJezykowaIO\SzkolaJezykowaIO\bin\Debug\SzkolaJezykowaIO.exe.config
+C:\Users\Dominik\source\repos\SzkolaJezykowaIO\SzkolaJezykowaIO\bin\Debug\SzkolaJezykowaIO.exe
+C:\Users\Dominik\source\repos\SzkolaJezykowaIO\SzkolaJezykowaIO\bin\Debug\SzkolaJezykowaIO.pdb
+C:\Users\Dominik\source\repos\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.csprojAssemblyReference.cache
+C:\Users\Dominik\source\repos\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.Properties.Resources.resources
+C:\Users\Dominik\source\repos\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.csproj.GenerateResource.cache
+C:\Users\Dominik\source\repos\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.csproj.CoreCompileInputs.cache
+C:\Users\Dominik\source\repos\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.exe
+C:\Users\Dominik\source\repos\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.pdb
