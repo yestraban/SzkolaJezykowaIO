@@ -17,6 +17,7 @@ namespace SzkolaJezykowaIO
             InitializeComponent();
             MessageBox.Show("nie dziala");
             MessageBox.Show("nie dziala, ale lepiej");
+            MessageBox.Show("nie dziala najlepiej!")
 
         }
     }
