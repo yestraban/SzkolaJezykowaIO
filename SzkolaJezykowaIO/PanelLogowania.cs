@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,14 +10,18 @@ using System.Windows.Forms;
 
 namespace SzkolaJezykowaIO
 {
-    public partial class Form1 : Form
+    public partial class PanelLogowania : UserControl
+
     {
-        public Form1()
+        public List<Uczen> listaUczniow= new List<Uczen>();
+        public PanelLogowania()
         {
             InitializeComponent();
-            MessageBox.Show("nie dziala");
-            MessageBox.Show("nie dziala, ale lepiej");
-            MessageBox.Show("nie dziala najlepiej!");
+
+        }
+
+        private void PanelLogowania_Load(object sender, EventArgs e)
+        {
 
         }
     }
