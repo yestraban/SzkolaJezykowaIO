@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SzkolaJezykowaIO;
 
 namespace SzkolaJezykowaTesty
 {
@@ -7,8 +8,12 @@ namespace SzkolaJezykowaTesty
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestPanelu()
         {
+            PanelLogowania a=new PanelLogowania();
+
+            var element = a.listaUczniow;
+
         }
     }
 }
