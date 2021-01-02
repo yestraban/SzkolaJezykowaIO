@@ -8,12 +8,24 @@ namespace SzkolaJezykowaIO
 {
     public class Osoba
     {
-        string login;
-        string haslo;
+        public string login;
+        public string haslo;
 
         public string imie;
         public string nazwisko;
         public int id;
         public List<Grupa> grupa;
+
+        public Osoba(string login, string haslo, string imie, string nazwisko, int id, List<Grupa> grupa)
+        {
+            // konstruktor inicjujący
+            this.login = login;
+            this.haslo = haslo;
+            this.imie = imie;
+            this.nazwisko = nazwisko;
+            this.id = id;
+            this.grupa = grupa;
+        }
     }
 }
+    
