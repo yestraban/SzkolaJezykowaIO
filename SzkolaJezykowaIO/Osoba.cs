@@ -24,7 +24,9 @@ namespace SzkolaJezykowaIO
             this.imie = imie;
             this.nazwisko = nazwisko;
             this.id = id;
-            this.grupa = grupa;
+            if (grupa is null)
+              this.grupa = new List<Grupa>();
+            else this.grupa = grupa;
         }
     }
 }

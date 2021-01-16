@@ -9,7 +9,7 @@ namespace SzkolaJezykowaIO
     public class Uczen : Osoba
     {
         public Uczen(string login, string haslo, string imie, 
-        string nazwisko, int id, List<Grupa> grupa):base(login,haslo,imie,nazwisko,id,grupa)
+        string nazwisko, int id, List<Grupa> grupa=null):base(login,haslo,imie,nazwisko,id,grupa)
         {}
 
         public void zapiszNaZajecia()
