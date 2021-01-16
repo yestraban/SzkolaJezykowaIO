@@ -13,5 +13,15 @@ namespace SzkolaJezykowaIO
         public string nazwa;
         public Prowadzacy prowadzacy;
         public List<Uczen> listaUczniow;
+
+        public Grupa(string jezyk, string poziomZaawansowania, string nazwa, Prowadzacy prowadzacy,
+            List<Uczen> listaUczniow)
+        {
+            // konstruktor inicjujący
+            this.jezyk = jezyk;
+            this.poziomZaawansowania = poziomZaawansowania;
+            this.nazwa = nazwa;
+            this.listaUczniow = listaUczniow;
+        }
     }
 }
