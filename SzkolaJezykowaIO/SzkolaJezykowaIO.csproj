@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ocena.cs" />
     <Compile Include="Prowadzacy.cs" />
     <Compile Include="Grupa.cs" />
     <Compile Include="Osoba.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="PanelLogowania.Designer.cs">
       <DependentUpon>PanelLogowania.cs</DependentUpon>
     </Compile>
+    <Compile Include="ZadanieDomowe.cs" />
     <Compile Include="Zajecia.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
