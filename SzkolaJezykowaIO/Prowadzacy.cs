@@ -43,5 +43,10 @@ namespace SzkolaJezykowaIO
             ocena.opis = opis;
         }
 
+        void sprawdzZadanieDomowe(ZadanieDomowe zadanie)
+        {
+            zadanie.wyswietl();
+        }
+
     }
 }
