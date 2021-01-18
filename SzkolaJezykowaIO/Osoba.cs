@@ -16,7 +16,7 @@ namespace SzkolaJezykowaIO
         public int id;
         public List<Grupa> grupa;
 
-        public Osoba(string login, string haslo, string imie, string nazwisko, int id, List<Grupa> grupa)
+        protected Osoba(string login, string haslo, string imie, string nazwisko, int id, List<Grupa> grupa)
         {
             // konstruktor inicjujący
             this.login = login;
@@ -24,9 +24,7 @@ namespace SzkolaJezykowaIO
             this.imie = imie;
             this.nazwisko = nazwisko;
             this.id = id;
-            if (grupa is null)
-              this.grupa = new List<Grupa>();
-            else this.grupa = grupa;
+            this.grupa = new List<Grupa>();
         }
     }
 }
