@@ -30,5 +30,18 @@ namespace SzkolaJezykowaIO
             uczen.listaOcen.Add(ocena);
         }
 
+        void edycjaOcen(Ocena ocena)
+        {
+            System.Console.WriteLine("Podaj ocenę");
+            double wartosc = Convert.ToDouble(Console.ReadLine());
+            System.Console.WriteLine("Podaj wagę oceny");
+            double waga = Convert.ToDouble(Console.ReadLine());
+            System.Console.WriteLine("Podaj opis oceny");
+            string opis = Console.ReadLine();
+            ocena.wartosc = wartosc;
+            ocena.waga = waga;
+            ocena.opis = opis;
+        }
+
     }
 }
