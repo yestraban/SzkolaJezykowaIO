@@ -13,6 +13,8 @@ namespace SzkolaJezykowaIO
     public partial class PanelLogowania : UserControl
 
     {
+        public Admin admin = new Admin("szkolajezykowa", "admin123");
+        public bool czyZalogowanyAdmin = false;
         public List<Uczen> listaUczniow= new List<Uczen>();
         public List<Prowadzacy> listaProwadzacych = new List<Prowadzacy>();
         public List<Grupa> listaGrup = new List<Grupa>();
@@ -22,6 +24,8 @@ namespace SzkolaJezykowaIO
         {
             InitializeComponent();
             //tutaj tworzyc obiekty
+            
+
             listaUczniow.Add(new Uczen("Jakub2015","qwerty","Stanislaw", "Marek", 1));
             listaUczniow.Add(new Uczen("FranekKimono","ytrewq","Jakub", "Krzysztofinski", 2));
             listaUczniow.Add(new Uczen("niezlykozak","nagasaki123","Ferdynand", "Panderewski", 3));
@@ -63,6 +67,43 @@ namespace SzkolaJezykowaIO
            listaZajec.Add(new Zajecia("Poniedzialek", "15:00", "nr 1", "ang_podstawowy",listaGrup[0]));
            listaZajec.Add(new Zajecia("Wtorek", "14:00", "nr 15", "ang_rozszerzony",listaGrup[2]));
 
+
+        }
+
+       
+         
+
+        public Uczen zalogujUcznia(string login, string haslo)
+        {
+            int i = 0;
+            while(i<listaUczniow.Count())
+            {
+                if (listaUczniow[i].login == login && listaUczniow[i].haslo == haslo)
+                    return listaUczniow[i];
+                i++;
+            }
+            return null;
+        }
+
+
+        public Prowadzacy zalogujProwadzacego(string login, string haslo)
+        {
+            int i = 0;
+            while (i<listaProwadzacych.Count())
+            {
+                if (listaProwadzacych[i].login == login && listaProwadzacych[i].haslo == haslo)
+                    return listaProwadzacych[i];
+                i++;
+            }
+            return null;
+        }
+
+        public bool zalogujAdmina(string login, string haslo)
+        {
+            if (login == admin.login && haslo == admin.haslo)
+                return true;
+            else
+                return false;
         }
 
         private void PanelLogowania_Load(object sender, EventArgs e)
