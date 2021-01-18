@@ -16,5 +16,11 @@ namespace SzkolaJezykowaIO
             this.tresc = tresc;
             this.tytul = tytul;
         }
+
+        public void wyswietl()
+        {
+            System.Console.WriteLine("Tytuł: "+ tytul);
+            System.Console.WriteLine("Treść: " + tresc);
+        }
     }
 }
