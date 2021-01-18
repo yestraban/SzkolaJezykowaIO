@@ -16,7 +16,7 @@ namespace SzkolaJezykowaIO
         {
             //najpierw oceny, zajecia do zrobienia
         }
-
+        
         void dodajOcene(Uczen uczen)
         {
 
@@ -28,7 +28,7 @@ namespace SzkolaJezykowaIO
             string opis = Console.ReadLine();
             Ocena ocena = new Ocena(wartosc, waga, opis);
             uczen.listaOcen.Add(ocena);
-
         }
+
     }
 }

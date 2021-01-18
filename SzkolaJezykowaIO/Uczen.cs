@@ -11,13 +11,11 @@ namespace SzkolaJezykowaIO
         public List<Ocena> listaOcen;
         public Uczen(string login, string haslo, string imie,
         string nazwisko, int id, List<Grupa> grupa = null,
-        List<Ocena> listaOcen = null) : base(login, haslo, imie, nazwisko, id, grupa)
+        List<Ocena> listaOcen = null) : base(login, haslo, imie, nazwisko, id, grupa, listaOcen)
         { }
 
         public void zapiszNaZajecia()
-        {
-
-        }
+        { }
 
         public void wyswietlOceny()
         {
@@ -27,7 +25,8 @@ namespace SzkolaJezykowaIO
             }
             else
             {
-                listaOcen.ForEach(delegate(Ocena ocena) { ocena.wyswietl(); });
+                listaOcen.ForEach(delegate(Ocena ocena) 
+                  { ocena.wyswietl(); });
             }
         }
     }
