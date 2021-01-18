@@ -12,7 +12,9 @@ namespace SzkolaJezykowaIO
         public List<ZadanieDomowe> listaZadan;
         public Uczen(string login, string haslo, string imie,
         string nazwisko, int id, List<Grupa> grupa = null,
+
         List<Ocena> listaOcen = null, List<ZadanieDomowe> listaZadan = null) : base(login, haslo, imie, nazwisko, id, grupa)
+
         { }
 
         public void zapiszNaZajecia()
