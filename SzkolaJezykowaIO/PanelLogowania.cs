@@ -58,8 +58,9 @@ namespace SzkolaJezykowaIO
             listaProwadzacych[1].grupa.Add(listaGrup[1]);
             listaProwadzacych[2].grupa.Add(listaGrup[2]);
             //na grupe przypada prowadzacy i kilku uczniow
-
-
+            
+            
+            //listaZajec.Add(Zajecia("25.01", ));
 
         }
 
