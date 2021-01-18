@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SzkolaJezykowaIO;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace SzkolaJezykowaTesty
 {
@@ -8,13 +10,13 @@ namespace SzkolaJezykowaTesty
     public class UnitTest1
     {
         [TestMethod]
-        public void TestLogowaniaUcznia()
+        public void LogowanieUcznia()
         {
-            PanelLogowania a=new PanelLogowania();
+            PanelLogowania a = new PanelLogowania();
 
-            
 
-            Uczen uczen= new Uczen("Jakub2015", "qwerty", "Stanislaw", "Marek", 1);
+
+            Uczen uczen = new Uczen("Jakub2015", "qwerty", "Stanislaw", "Marek", 1);
 
             uczen = a.zalogujUcznia("Jakub2015", "qwerty");
 
@@ -22,7 +24,7 @@ namespace SzkolaJezykowaTesty
 
         }
         [TestMethod]
-        public void TestLogowaniaUczniaZKoncaListy()
+        public void LogowanieUczniaZKoncaListy()
         {
             PanelLogowania a = new PanelLogowania();
 
@@ -37,7 +39,7 @@ namespace SzkolaJezykowaTesty
         }
 
         [TestMethod]
-        public void TestLogowaniaUczniaToFail()
+        public void LogowanieUczniaToFail()
         {
             PanelLogowania a = new PanelLogowania();
 
@@ -52,7 +54,7 @@ namespace SzkolaJezykowaTesty
         }
 
         [TestMethod]
-        public void TestLogowaniaProwadzacego()
+        public void LogowanieProwadzacego()
         {
             PanelLogowania a = new PanelLogowania();
 
@@ -67,7 +69,7 @@ namespace SzkolaJezykowaTesty
         }
 
         [TestMethod]
-        public void TestLogowaniaAdmina()
+        public void LogowanieAdmina()
         {
             PanelLogowania a = new PanelLogowania();
 
@@ -77,13 +79,55 @@ namespace SzkolaJezykowaTesty
         }
 
         [TestMethod]
-        public void TestLogowaniaAdminaToFail()
+        public void LogowaniedminaToFail()
         {
             PanelLogowania a = new PanelLogowania();
 
             a.czyZalogowanyAdmin = a.zalogujAdmina("random", "random");
 
             Assert.IsFalse(a.czyZalogowanyAdmin);
+        }
+
+        [TestMethod]
+        public void DodawanieNaListeOczekujacych()
+        {
+            PanelLogowania a = new PanelLogowania();
+
+            Uczen uczen = new Uczen("Jakub2015", "qwerty", "Stanislaw", "Marek", 1);
+
+            a.admin.dodajNaListe(uczen);
+
+            Assert.AreEqual(a.admin.listaOczekujacych[0].imie, "Stanislaw");
+        }
+
+        [TestMethod]
+        public void DodawanieDoGrupy()
+        {
+            
+            PanelLogowania a = new PanelLogowania();
+            Uczen uczen = new Uczen("Jakub2015", "qwerty", "Stanislaw", "Marek", 1);
+            Prowadzacy prowadzacy = new Prowadzacy("Squirtle123", "pikachu", "Grzegorz", "Adamiakowa", 1);
+            Grupa grupa = new Grupa("angielski", "podstawowy", "podstawowy", prowadzacy, new List<Uczen>());
+
+            a.admin.dodajDoGrupy(uczen, grupa);
+
+            Assert.AreEqual(uczen, grupa.listaUczniow[0]);
+
+            Assert.AreEqual(grupa, uczen.grupa[0]);
+        }
+
+
+        [TestMethod]
+        public void edycjaGrupy()
+        {
+            PanelLogowania a = new PanelLogowania();
+            Uczen uczen = new Uczen("Jakub2015", "qwerty", "Stanislaw", "Marek", 1);
+            Prowadzacy prowadzacy = new Prowadzacy("Squirtle123", "pikachu", "Grzegorz", "Adamiakowa", 1);
+            Grupa grupa = new Grupa("angielski", "podstawowy", "podstawowy", prowadzacy, new List<Uczen>());
+
+            a.admin.edytujGrupe(grupa, null, null, "innanazwa", null);
+
+            Assert.AreEqual(grupa.nazwa, "innanazwa");
         }
     }
 }

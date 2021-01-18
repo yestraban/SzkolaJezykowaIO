@@ -11,16 +11,39 @@ namespace SzkolaJezykowaIO
         public string login;
         public string haslo;
         public List<Uczen> listaOczekujacych;
-        public List<Grupa> listaGrup;
 
         public Admin(string login, string haslo) //konstruktor inicjujący
         {
             this.login = login;
             this.haslo = haslo;
             this.listaOczekujacych = new List<Uczen>();
-            this.listaGrup = new List<Grupa>();
         }
 
-        public void dodajNaListe
+        public void dodajNaListe(Uczen uczen)
+        {
+            this.listaOczekujacych.Add(uczen);
+        }
+
+        public void dodajDoGrupy(Uczen uczen, Grupa grupa)
+        {
+            uczen.grupa.Add(grupa);
+            grupa.listaUczniow.Add(uczen);
+        }
+
+        public void edytujGrupe(Grupa grupa, string jezyk, string poziomZaawansowania, string nazwa, Prowadzacy prowadzacy)
+        {
+            if (jezyk != null)
+                grupa.jezyk = jezyk;
+
+            if (poziomZaawansowania != null)
+                grupa.poziomZaawansowania = poziomZaawansowania;
+
+            if (nazwa != null)
+                grupa.nazwa = nazwa;
+
+            if (prowadzacy != null)
+                grupa.prowadzacy = prowadzacy;
+        }
+
     }
 }

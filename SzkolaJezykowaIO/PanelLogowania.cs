@@ -13,7 +13,7 @@ namespace SzkolaJezykowaIO
     public partial class PanelLogowania : UserControl
 
     {
-        public static Admin admin = new Admin("szkolajezykowa", "admin123");
+        public Admin admin = new Admin("szkolajezykowa", "admin123");
         public bool czyZalogowanyAdmin = false;
         public List<Uczen> listaUczniow= new List<Uczen>();
         public List<Prowadzacy> listaProwadzacych = new List<Prowadzacy>();
