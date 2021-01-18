@@ -60,7 +60,8 @@ namespace SzkolaJezykowaIO
             //na grupe przypada prowadzacy i kilku uczniow
             
             
-            //listaZajec.Add(Zajecia("25.01", ));
+           listaZajec.Add(new Zajecia("Poniedzialek", "15:00", "nr 1", "ang_podstawowy",listaGrup[0]));
+           listaZajec.Add(new Zajecia("Wtorek", "14:00", "nr 15", "ang_rozszerzony",listaGrup[2]));
 
         }
 
