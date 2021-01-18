@@ -45,5 +45,19 @@ namespace SzkolaJezykowaIO
                 grupa.prowadzacy = prowadzacy;
         }
 
+        public void usunUcznia(List<Uczen> listaUczniow, Uczen uczen)
+        {
+            listaUczniow.Remove(uczen);
+        }
+
+        public void usunProwadzacego(List<Prowadzacy> listaProwadzacych, Prowadzacy prowadzacy)
+        {
+            listaProwadzacych.Remove(prowadzacy);
+        }
+
+        public void usunGrupe(List<Grupa> listaGrup, Grupa grupa)
+        {
+            listaGrup.Remove(grupa);
+        }
     }
 }
