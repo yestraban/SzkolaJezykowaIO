@@ -26,7 +26,7 @@ namespace SzkolaJezykowaIO
             //tutaj tworzyc obiekty
 
 
-            listaUczniow.Add(new Uczen("Jakub2015", "qwerty", "Stanislaw", "Marek", 1));
+            listaUczniow.Add(new Uczen("abc", "123", "Stanislaw", "Marek", 1));
             listaUczniow.Add(new Uczen("FranekKimono", "ytrewq", "Jakub", "Krzysztofinski", 2));
             listaUczniow.Add(new Uczen("niezlykozak", "nagasaki123", "Ferdynand", "Panderewski", 3));
             listaUczniow.Add(new Uczen("zabujca2012", "picobelo", "Miguel", "Cortez", 4));

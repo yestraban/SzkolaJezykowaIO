@@ -12,9 +12,12 @@ namespace SzkolaJezykowaIO
 {
     public partial class PanelLogowaniaForm : Form
     {
+        public PanelLogowania panel= new PanelLogowania();
+
         public PanelLogowaniaForm()
         {
             InitializeComponent();
+            
            // MessageBox.Show("Witaj w Szkole Językowej eMKa");
            // MessageBox.Show("Zaloguj się na swoje konto");
 
@@ -35,7 +38,39 @@ namespace SzkolaJezykowaIO
         {
             
         }
-       // comboBox1.SelectedIndex.ToString()
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            int a = comboBox1.SelectedIndex;
+
+            if(a==0)
+            {
+                Uczen uczen = panel.zalogujUcznia(textBox1.Text,textBox2.Text);
+                if (uczen == null)
+                    MessageBox.Show("Podano nieprawidlowe dane");
+                else
+                    MessageBox.Show("zalogowano");
+            }
+
+            else if(a == 1)
+            {
+                Prowadzacy prowadzacy = panel.zalogujProwadzacego(textBox1.Text, textBox2.Text);
+                if (prowadzacy == null)
+                    MessageBox.Show("Podano nieprawidlowe dane");
+                else
+                    MessageBox.Show("zalogowano");
+            }
+
+            else if (a == 2)
+            {
+               panel.czyZalogowanyAdmin = panel.zalogujAdmina(textBox1.Text, textBox2.Text);
+                if (panel.czyZalogowanyAdmin == false)
+                    MessageBox.Show("Podano nieprawidlowe dane");
+                else
+                    MessageBox.Show("zalogowano");
+            }
+        }
+        // comboBox1.SelectedIndex.ToString()
 
 
     }
