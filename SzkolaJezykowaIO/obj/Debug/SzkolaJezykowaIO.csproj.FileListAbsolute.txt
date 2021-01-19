@@ -30,3 +30,4 @@ C:\Users\WIktor\RiderProjects\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\Szkola
 C:\Users\WIktor\RiderProjects\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.pdb
 C:\Users\Dominik\source\repos\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.PanelLogowaniaForm.resources
 C:\Users\Dominik\source\repos\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.PanelUcznia.resources
+C:\Users\Dominik\source\repos\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.Harmonogram.resources

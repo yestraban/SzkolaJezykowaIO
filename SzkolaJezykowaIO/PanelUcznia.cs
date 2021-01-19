@@ -51,5 +51,10 @@ namespace SzkolaJezykowaIO
                 MessageBox.Show(listaOcenString);
             }
         }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace SzkolaJezykowaIO
 {
@@ -32,6 +33,8 @@ namespace SzkolaJezykowaIO
                 "Admin"
             };
             comboBox1.Items.AddRange(rodzajKonta);                  //dodanie opcji do comboboxa
+
+            
         }
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -54,7 +57,6 @@ namespace SzkolaJezykowaIO
                     PanelUcznia panelUcznia = new PanelUcznia(uczen);
                     panelUcznia.Show();
                     this.Hide();
-
                 }
                
             }
@@ -76,6 +78,12 @@ namespace SzkolaJezykowaIO
                 else
                     MessageBox.Show("zalogowano");
             }
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            Harmonogram harmonogram = new Harmonogram();
+            harmonogram.Show();
         }
         // comboBox1.SelectedIndex.ToString()
 

@@ -20,18 +20,6 @@ namespace SzkolaJezykowaIO
         public void zapiszNaZajecia()
         { }
 
-        public void wyswietlOceny()
-        {
-            if (listaOcen == null)
-            {
-                System.Console.WriteLine("Brak ocen do wyświetlenia");
-            }
-            else
-            {
-                listaOcen.ForEach(delegate(Ocena ocena) 
-                  { ocena.wyswietl(); });
-            }
-        }
 
         public void zlozZadanieDoOceny(string tresc, string tytul)
         {
