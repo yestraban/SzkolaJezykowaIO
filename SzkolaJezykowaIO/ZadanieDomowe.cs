@@ -8,8 +8,8 @@ namespace SzkolaJezykowaIO
 {
     public class ZadanieDomowe
     {
-        private string tresc;
-        private string tytul;
+        public string tresc;
+        public string tytul;
 
         public ZadanieDomowe (string tresc, string tytul)
         {
