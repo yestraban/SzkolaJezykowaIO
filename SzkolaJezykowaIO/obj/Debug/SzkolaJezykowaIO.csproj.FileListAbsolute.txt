@@ -8,7 +8,6 @@ C:\Users\WIktor\source\repos\PROJEKT IO\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\De
 C:\Users\WIktor\source\repos\PROJEKT IO\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.exe
 C:\Users\WIktor\source\repos\PROJEKT IO\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.pdb
 C:\Users\Dominik\source\repos\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.csprojAssemblyReference.cache
-C:\Users\Dominik\source\repos\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.Form1.resources
 C:\Users\Dominik\source\repos\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.Properties.Resources.resources
 C:\Users\Dominik\source\repos\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.PanelLogowania.resources
 C:\Users\Dominik\source\repos\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.csproj.GenerateResource.cache
@@ -29,3 +28,4 @@ C:\Users\WIktor\RiderProjects\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\Szkola
 C:\Users\WIktor\RiderProjects\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.csproj.CoreCompileInputs.cache
 C:\Users\WIktor\RiderProjects\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.exe
 C:\Users\WIktor\RiderProjects\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.pdb
+C:\Users\Dominik\source\repos\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.PanelLogowaniaForm.resources
