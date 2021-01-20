@@ -103,6 +103,24 @@
     <Compile Include="PanelLogowania.Designer.cs">
       <DependentUpon>PanelLogowania.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsunGrupe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsunGrupe.Designer.cs">
+      <DependentUpon>UsunGrupe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsunProwadzacego.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsunProwadzacego.Designer.cs">
+      <DependentUpon>UsunProwadzacego.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsunUcznia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsunUcznia.Designer.cs">
+      <DependentUpon>UsunUcznia.cs</DependentUpon>
+    </Compile>
     <Compile Include="ZadanieDomowe.cs" />
     <Compile Include="Zajecia.cs" />
     <EmbeddedResource Include="DodajUczniaDoGrupyForm.resx">
@@ -138,6 +156,15 @@
     </Compile>
     <EmbeddedResource Include="PanelLogowania.resx">
       <DependentUpon>PanelLogowania.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsunGrupe.resx">
+      <DependentUpon>UsunGrupe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsunProwadzacego.resx">
+      <DependentUpon>UsunProwadzacego.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsunUcznia.resx">
+      <DependentUpon>UsunUcznia.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

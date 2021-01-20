@@ -50,3 +50,5 @@ C:\Users\Dominik\source\repos\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\Szkola
 C:\Users\Dominik\source\repos\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.PanelAdmina.resources
 C:\Users\lucza\OneDrive\Dokumenty\GitHub\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.DodajUczniaDoGrupyForm.resources
 C:\Users\lucza\OneDrive\Dokumenty\GitHub\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.EdytujGrupeForm.resources
+C:\Users\lucza\OneDrive\Dokumenty\GitHub\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.UsunUcznia.resources
+C:\Users\lucza\OneDrive\Dokumenty\GitHub\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.UsunProwadzacego.resources

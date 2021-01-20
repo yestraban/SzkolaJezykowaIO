@@ -37,11 +37,13 @@ namespace SzkolaJezykowaIO
         }
         private void Button3_Click(object sender, EventArgs e)
         {
-
+            UsunUcznia usunUcznia = new UsunUcznia(admin);
+            usunUcznia.Show();
         }
         private void Button4_Click(object sender, EventArgs e)
         {
-
+            UsunProwadzacego usunProwadzacego = new UsunProwadzacego(admin);
+            usunProwadzacego.Show();
         }
         private void Button5_Click(object sender, EventArgs e)
         {
