@@ -55,22 +55,9 @@ namespace SzkolaJezykowaIO
             MessageBox.Show("praca w toku");
         }
 
-        private void button2_Click(object sender, EventArgs e)//ComboBoxy do poprawienia
+        private void button2_Click(object sender, EventArgs e)
         {
             
-
-            
-            /*prowadzacy.grupa.ForEach(delegate (Grupa grupa)
-            {
-                comboBox1.Items.Add(grupa.nazwa);
-            });*/
-            
-
-
-            /*prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow.ForEach(delegate (Uczen uczen)
-            {
-                comboBox2.Items.Add(uczen.imie + " " + uczen.nazwisko);
-            });*/
             Uczen uczenDoOceny = prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex];
             
             
@@ -85,9 +72,11 @@ namespace SzkolaJezykowaIO
         {
             MessageBox.Show("praca w toku");
         }
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)// na razie wyświetla najnowsze zadanie
         {
-            MessageBox.Show("praca w toku");
+            Uczen uczenDoOceny = prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex];
+            ZadanieDomowe zad = uczenDoOceny.listaZadan[uczenDoOceny.listaZadan.Count - 1];
+            MessageBox.Show("Tytuł zadania: " + zad.tytul + "\nTreść: " + zad.tresc);
         }
     }
 }
