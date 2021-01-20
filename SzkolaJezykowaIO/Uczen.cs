@@ -11,13 +11,12 @@ namespace SzkolaJezykowaIO
         public List<Ocena> listaOcen= new List<Ocena>();
         public List<ZadanieDomowe> listaZadan= new List<ZadanieDomowe>();
         public Uczen(string login, string haslo, string imie,
-        string nazwisko, 
-        int id, 
-        List<Grupa> grupa = null,
+        string nazwisko, int id, List<Grupa> grupa = null, List<Ocena> listaOcen = null, 
+        List<ZadanieDomowe> listaZadan = null) : base(login, haslo, imie, nazwisko, id, grupa)
+        {
+            this.listaZadan.Add(new ZadanieDomowe("Treść zadania", "Tytuł zadania"));
 
-        List<Ocena> listaOcen = null, List<ZadanieDomowe> listaZadan = null) : base(login, haslo, imie, nazwisko, id, grupa)
-
-        { }
+        }
 
         public void zapiszNaZajecia()
         { }

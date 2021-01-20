@@ -67,7 +67,13 @@ namespace SzkolaJezykowaIO
                 if (prowadzacy == null)
                     MessageBox.Show("Podano nieprawidlowe dane");
                 else
+                {
                     MessageBox.Show("zalogowano");
+                    PanelProwadzacego panelProwadzacego = new PanelProwadzacego(prowadzacy);
+                    panelProwadzacego.Show();
+                    this.Hide();
+                }
+
             }
 
             else if (a == 2)
@@ -76,7 +82,12 @@ namespace SzkolaJezykowaIO
                 if (panel.czyZalogowanyAdmin == false)
                     MessageBox.Show("Podano nieprawidlowe dane");
                 else
+                {
                     MessageBox.Show("zalogowano");
+                    PanelAdmina panelAdmina = new PanelAdmina(panel.admin);
+                    panelAdmina.Show();
+                    this.Hide();
+                }
             }
         }
 
