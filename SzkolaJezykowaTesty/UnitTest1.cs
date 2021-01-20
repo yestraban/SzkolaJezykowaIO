@@ -93,11 +93,11 @@ namespace SzkolaJezykowaTesty
         {
             PanelLogowania a = new PanelLogowania();
 
-            Uczen uczen = new Uczen("Jakub2015", "qwerty", "Stanislaw", "Marek", 1);
+            Uczen uczen = new Uczen("abc", "123", "Stanislaw", "Marek", 1);
 
             a.admin.dodajNaListe(uczen, "angielski","podstawowy");
 
-            Assert.AreEqual(a.admin.listaOczekujacych[0].uczen.imie, "Stanislaw");
+            Assert.AreEqual(a.admin.listaOczekujacych[a.admin.listaOczekujacych.Count-1].uczen.imie, "Stanislaw");
         }
 
         [TestMethod]

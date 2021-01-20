@@ -46,3 +46,5 @@ C:\Users\lucza\OneDrive\Dokumenty\GitHub\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\D
 C:\Users\lucza\OneDrive\Dokumenty\GitHub\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.exe
 C:\Users\lucza\OneDrive\Dokumenty\GitHub\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.pdb
 C:\Users\lucza\OneDrive\Dokumenty\GitHub\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.PanelProwadzacego.resources
+C:\Users\Dominik\source\repos\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.PanelProwadzacego.resources
+C:\Users\Dominik\source\repos\SzkolaJezykowaIO\SzkolaJezykowaIO\obj\Debug\SzkolaJezykowaIO.PanelAdmina.resources
