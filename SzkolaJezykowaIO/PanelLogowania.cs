@@ -52,7 +52,6 @@ namespace SzkolaJezykowaIO
                 new List<Uczen> {listaUczniow[1], listaUczniow[9], listaUczniow[10], listaUczniow[2]}));
             listaUczniow[0].grupa.Add(listaGrup[0]);
             listaUczniow[0].grupa.Add(listaGrup[1]); // z zera jest w dwoch grupach
-            listaUczniow[0].grupa.Add(listaGrup[2]); //będzie jeszcze w trzeciej
             listaUczniow[1].grupa.Add(listaGrup[0]);
             listaUczniow[1].grupa.Add(listaGrup[3]);
             listaUczniow[2].grupa.Add(listaGrup[0]);

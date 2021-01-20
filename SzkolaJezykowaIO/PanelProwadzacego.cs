@@ -105,8 +105,13 @@ namespace SzkolaJezykowaIO
         private void button4_Click(object sender, EventArgs e)// wyświetla najnowsze zadanie
         {
             Uczen uczenDoOceny = prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex];
-            ZadanieDomowe zad = uczenDoOceny.listaZadan[uczenDoOceny.listaZadan.Count - 1];
-            MessageBox.Show("Tytuł zadania: " + zad.tytul + "\nTreść: " + zad.tresc);
+            if (uczenDoOceny.listaZadan.Count!=0)
+            {
+                ZadanieDomowe zad = uczenDoOceny.listaZadan[uczenDoOceny.listaZadan.Count - 1];
+                MessageBox.Show("Tytuł zadania: " + zad.tytul + "\nTreść: " + zad.tresc);
+            }
+            else
+                MessageBox.Show("Brak zadań do wyświetlenia");
         }
     }
 }

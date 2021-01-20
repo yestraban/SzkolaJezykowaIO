@@ -14,7 +14,6 @@ namespace SzkolaJezykowaIO
         string nazwisko, int id, List<Grupa> grupa = null, List<Ocena> listaOcen = null, 
         List<ZadanieDomowe> listaZadan = null) : base(login, haslo, imie, nazwisko, id, grupa)
         {
-            this.listaZadan.Add(new ZadanieDomowe("Treść zadania", "Tytuł zadania"));
 
         }
 
