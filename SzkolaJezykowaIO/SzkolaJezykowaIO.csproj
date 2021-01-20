@@ -48,6 +48,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.cs" />
+    <Compile Include="DodajUczniaDoGrupyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajUczniaDoGrupyForm.Designer.cs">
+      <DependentUpon>DodajUczniaDoGrupyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EdytujGrupeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EdytujGrupeForm.Designer.cs">
+      <DependentUpon>EdytujGrupeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PanelProwadzacego.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +105,12 @@
     </Compile>
     <Compile Include="ZadanieDomowe.cs" />
     <Compile Include="Zajecia.cs" />
+    <EmbeddedResource Include="DodajUczniaDoGrupyForm.resx">
+      <DependentUpon>DodajUczniaDoGrupyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EdytujGrupeForm.resx">
+      <DependentUpon>EdytujGrupeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PanelProwadzacego.resx">
       <DependentUpon>PanelProwadzacego.cs</DependentUpon>
     </EmbeddedResource>

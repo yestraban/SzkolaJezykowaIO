@@ -26,10 +26,10 @@ namespace SzkolaJezykowaIO
             {
                 label3.Text += (grupa.nazwa + " \n");
             });
-            button1.Click += new EventHandler(this.button1_Click);
-            button2.Click += new EventHandler(this.button2_Click);
-            button3.Click += new EventHandler(this.button3_Click);
-            button4.Click += new EventHandler(this.button4_Click);
+            button1.Click += new EventHandler(this.Button1_Click);
+            button2.Click += new EventHandler(this.Button2_Click);
+            button3.Click += new EventHandler(this.Button3_Click);
+            button4.Click += new EventHandler(this.Button4_Click);
             foreach (Grupa grupa in prowadzacy.grupa)
             {
                 comboBox1.Items.Add(grupa.nazwa);
@@ -64,7 +64,7 @@ namespace SzkolaJezykowaIO
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             Uczen uczenDoWyswietlenia = prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex];
             string listaOcenString = "";
@@ -77,7 +77,7 @@ namespace SzkolaJezykowaIO
             MessageBox.Show(uczenDoWyswietlenia.imie+" " +uczenDoWyswietlenia.nazwisko+"\nid:"+ uczenDoWyswietlenia.id+"\ngrupa: "+ prowadzacy.grupa[0]+"\nOceny:\n"+listaOcenString);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             
             Uczen uczenDoOceny = prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex];
@@ -90,7 +90,7 @@ namespace SzkolaJezykowaIO
             uczenDoOceny.listaOcen.Add(new Ocena(wartosc, waga, opis));
             MessageBox.Show("Ocena została dodana");
         }
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             Ocena ocenaDoZmiany = prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex].listaOcen[comboBox3.SelectedIndex];
             double wartosc = Convert.ToDouble(Interaction.InputBox("podaj wartość"));
@@ -102,7 +102,7 @@ namespace SzkolaJezykowaIO
             prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex].listaOcen[comboBox3.SelectedIndex] = ocenaDoZmiany;
             MessageBox.Show("Ocena została zmieniona");
         }
-        private void button4_Click(object sender, EventArgs e)// wyświetla najnowsze zadanie
+        private void Button4_Click(object sender, EventArgs e)// wyświetla najnowsze zadanie
         {
             Uczen uczenDoOceny = prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex];
             if (uczenDoOceny.listaZadan.Count!=0)
