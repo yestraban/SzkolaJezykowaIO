@@ -22,12 +22,7 @@ namespace SzkolaJezykowaIO
         {
             this.login = login;
             this.haslo = haslo;
-            Uczen uczen = new Uczen("a", "a", "Adam", "Kowalski", 2342);
-            Oczekujacy oczek = new Oczekujacy();
-            oczek.uczen = uczen;
-            oczek.jezyk = "angielski";
-            oczek.poziomZaawansowania = "C1";
-            listaOczekujacych.Add(oczek);
+            
         }
 
         public void dodajNaListe(Uczen uczen, string jezyk, string poziom)
