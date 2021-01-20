@@ -86,6 +86,11 @@ namespace SzkolaJezykowaIO
             listaZajec.Add(new Zajecia("Środa", "15:00", "nr 1", "niem_podstawowy", listaGrup[3]));
             listaZajec.Add(new Zajecia("Czwartek", "16:00", "nr 2", "hiszp_podstawowy", listaGrup[1]));
             listaZajec.Add(new Zajecia("Piatek", "16:00", "nr 1", "hiszp_podstawowy", listaGrup[1]));
+
+            Ocena nowaOcena = new Ocena(4, 0.1, "zadanie domowe");
+            Ocena nowaOcena2 = new Ocena(4, 0.2, "sprawdzian");
+            listaUczniow[0].listaOcen.Add(nowaOcena);
+            listaUczniow[0].listaOcen.Add(nowaOcena2);
         }
 
 

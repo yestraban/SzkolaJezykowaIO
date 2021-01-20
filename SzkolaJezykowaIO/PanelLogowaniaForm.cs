@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace SzkolaJezykowaIO
 {
@@ -25,13 +26,15 @@ namespace SzkolaJezykowaIO
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string[] rodzajKonta =
+            string[] rodzajKonta =          //wypełnienie tablicy stringów opcjami do wybrania
             {
                 "Uczeń",
                 "Prowadzący",
                 "Admin"
             };
-            comboBox1.Items.AddRange(rodzajKonta);
+            comboBox1.Items.AddRange(rodzajKonta);                  //dodanie opcji do comboboxa
+
+            
         }
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -41,7 +44,7 @@ namespace SzkolaJezykowaIO
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            int a = comboBox1.SelectedIndex;
+            int a = comboBox1.SelectedIndex;            //zebranie indeksu wybranej opcji z comboboxa
 
             if(a==0)
             {
@@ -49,7 +52,13 @@ namespace SzkolaJezykowaIO
                 if (uczen == null)
                     MessageBox.Show("Podano nieprawidlowe dane");
                 else
+                {
                     MessageBox.Show("zalogowano");
+                    PanelUcznia panelUcznia = new PanelUcznia(uczen);
+                    panelUcznia.Show();
+                    this.Hide();
+                }
+               
             }
 
             else if(a == 1)
@@ -69,6 +78,12 @@ namespace SzkolaJezykowaIO
                 else
                     MessageBox.Show("zalogowano");
             }
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            Harmonogram harmonogram = new Harmonogram();
+            harmonogram.Show();
         }
         // comboBox1.SelectedIndex.ToString()
 

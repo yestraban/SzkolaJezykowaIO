@@ -18,7 +18,7 @@ namespace SzkolaJezykowaTesty
 
             Uczen uczen = new Uczen("Jakub2015", "qwerty", "Stanislaw", "Marek", 1);
 
-            uczen = a.zalogujUcznia("Jakub2015", "qwerty");
+            uczen = a.zalogujUcznia("abc", "123");
 
             Assert.AreEqual(uczen.imie, "Stanislaw");
 
@@ -95,9 +95,9 @@ namespace SzkolaJezykowaTesty
 
             Uczen uczen = new Uczen("Jakub2015", "qwerty", "Stanislaw", "Marek", 1);
 
-            a.admin.dodajNaListe(uczen);
+            a.admin.dodajNaListe(uczen, "angielski","podstawowy");
 
-            Assert.AreEqual(a.admin.listaOczekujacych[0].imie, "Stanislaw");
+            Assert.AreEqual(a.admin.listaOczekujacych[0].uczen.imie, "Stanislaw");
         }
 
         [TestMethod]
@@ -129,5 +129,20 @@ namespace SzkolaJezykowaTesty
 
             Assert.AreEqual(grupa.nazwa, "innanazwa");
         }
+
+        [TestMethod]
+        public void zlozZadanieDoOceny()
+        {
+            PanelLogowania a = new PanelLogowania();
+            Uczen uczen = new Uczen("Jakub2015", "qwerty", "Stanislaw", "Marek", 1);
+            ZadanieDomowe zadanie = new ZadanieDomowe("nowe", "zadanie");
+
+            uczen.zlozZadanieDoOceny("nowe", "zadania");
+
+            Assert.AreEqual(uczen.listaZadan[0].tresc, zadanie.tresc);
+
+            Assert.AreNotEqual(uczen.listaZadan[0].tytul, zadanie.tytul);
+        }
+
     }
 }
