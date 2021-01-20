@@ -16,7 +16,7 @@ namespace SzkolaJezykowaIO
         {
             //najpierw oceny, zajecia do zrobienia
         }
-        
+
         void dodajOcene(Uczen uczen)
         {
 

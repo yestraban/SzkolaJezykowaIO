@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SzkolaJezykowaIO
 {
-    public partial class Harmonogram : Form
+    public partial class Form1 : Form
     {
-        public Harmonogram()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void Harmonogram_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

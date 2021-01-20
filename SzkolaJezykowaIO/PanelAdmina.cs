@@ -20,8 +20,8 @@ namespace SzkolaJezykowaIO
             admin = podajAdmina;
         }
 
-        
 
-        
+
+
     }
 }

@@ -33,7 +33,7 @@
             this.SuspendLayout();
             // 
             // pictureBox1
-            // 
+           
             this.pictureBox1.Image = global::SzkolaJezykowaIO.Properties.Resources.PlanZajec;
             this.pictureBox1.Location = new System.Drawing.Point(2, -3);
             this.pictureBox1.Name = "pictureBox1";

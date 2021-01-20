@@ -15,7 +15,7 @@ namespace SzkolaJezykowaIO
     {
         public PanelLogowania panel = new PanelLogowania();
         public Prowadzacy prowadzacy;
-        
+
         public PanelProwadzacego(Prowadzacy podajProwadzacego)
         {
             InitializeComponent();
@@ -48,11 +48,11 @@ namespace SzkolaJezykowaIO
                     comboBox2.Items.Add(ucz.imie + " " + ucz.nazwisko);
                 }
             }
-            if (comboBox2.SelectedIndex >= 0 && comboBox1.SelectedIndex >=0)
+            if (comboBox2.SelectedIndex >= 0 && comboBox1.SelectedIndex >= 0)
             {
                 foreach (Ocena ocena in prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex].listaOcen)
                 {
-                    comboBox3.Items.Add(ocena.opis+": "+ocena.wartosc);
+                    comboBox3.Items.Add(ocena.opis + ": " + ocena.wartosc);
                 }
             }
             else
@@ -72,17 +72,17 @@ namespace SzkolaJezykowaIO
             {
                 listaOcenString += (ocena.opis + ": " + ocena.wartosc + " (waga: " + ocena.waga + ")\n");
             });
-        
 
-            MessageBox.Show(uczenDoWyswietlenia.imie+" " +uczenDoWyswietlenia.nazwisko+"\nid:"+ uczenDoWyswietlenia.id+"\ngrupa: "+ prowadzacy.grupa[0]+"\nOceny:\n"+listaOcenString);
+
+            MessageBox.Show(uczenDoWyswietlenia.imie + " " + uczenDoWyswietlenia.nazwisko + "\nid:" + uczenDoWyswietlenia.id + "\ngrupa: " + prowadzacy.grupa[0] + "\nOceny:\n" + listaOcenString);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
             Uczen uczenDoOceny = prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex];
-            
-            
+
+
             double wartosc = Convert.ToDouble(Interaction.InputBox("podaj wartość"));
             double waga = Convert.ToDouble(Interaction.InputBox("podaj wagę"));
             string opis = Interaction.InputBox("podaj opis oceny");
@@ -105,7 +105,7 @@ namespace SzkolaJezykowaIO
         private void button4_Click(object sender, EventArgs e)// wyświetla najnowsze zadanie
         {
             Uczen uczenDoOceny = prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex];
-            if (uczenDoOceny.listaZadan.Count!=0)
+            if (uczenDoOceny.listaZadan.Count != 0)
             {
                 ZadanieDomowe zad = uczenDoOceny.listaZadan[uczenDoOceny.listaZadan.Count - 1];
                 MessageBox.Show("Tytuł zadania: " + zad.tytul + "\nTreść: " + zad.tresc);

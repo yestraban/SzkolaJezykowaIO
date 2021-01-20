@@ -15,7 +15,7 @@ namespace SzkolaJezykowaIO
     {
         public Admin admin = new Admin("szkolajezykowa", "admin123");
         public bool czyZalogowanyAdmin = false;
-        public List<Uczen> listaUczniow= new List<Uczen>();
+        public List<Uczen> listaUczniow = new List<Uczen>();
         public List<Prowadzacy> listaProwadzacych = new List<Prowadzacy>();
         public List<Grupa> listaGrup = new List<Grupa>();
         public List<Zajecia> listaZajec = new List<Zajecia>();
@@ -43,13 +43,13 @@ namespace SzkolaJezykowaIO
             listaProwadzacych.Add(new Prowadzacy("ajem", "juar", "Adam", "Miauczynski", 3));
             listaProwadzacych.Add(new Prowadzacy("messerschmitt", "jednarunda", "Endriu", "Golota", 4));
             listaGrup.Add(new Grupa("angielski", "podstawowy", "ang_podstawowy", listaProwadzacych[0],
-                new List<Uczen> {listaUczniow[0], listaUczniow[1], listaUczniow[2]}));
+                new List<Uczen> { listaUczniow[0], listaUczniow[1], listaUczniow[2] }));
             listaGrup.Add(new Grupa("hiszpanski", "podstawowy", "hiszp_podstawowy", listaProwadzacych[1],
-                new List<Uczen> {listaUczniow[5], listaUczniow[6], listaUczniow[7], listaUczniow[8], listaUczniow[0]}));
+                new List<Uczen> { listaUczniow[5], listaUczniow[6], listaUczniow[7], listaUczniow[8], listaUczniow[0] }));
             listaGrup.Add(new Grupa("angielski", "rozszerzony", "ang_rozszerzony", listaProwadzacych[2],
-                new List<Uczen> { listaUczniow[0], listaUczniow[3], listaUczniow[4], listaUczniow[5]}));
+                new List<Uczen> { listaUczniow[0], listaUczniow[3], listaUczniow[4], listaUczniow[5] }));
             listaGrup.Add(new Grupa("niemiecki", "podstawowy", "niem_rozszerzony", listaProwadzacych[3],
-                new List<Uczen> {listaUczniow[1], listaUczniow[9], listaUczniow[10], listaUczniow[2]}));
+                new List<Uczen> { listaUczniow[1], listaUczniow[9], listaUczniow[10], listaUczniow[2] }));
             listaUczniow[0].grupa.Add(listaGrup[0]);
             listaUczniow[0].grupa.Add(listaGrup[1]); // z zera jest w dwoch grupach
             listaUczniow[1].grupa.Add(listaGrup[0]);
@@ -99,7 +99,7 @@ namespace SzkolaJezykowaIO
         public Uczen ZalogujUcznia(string login, string haslo)
         {
             int i = 0;
-            while(i<listaUczniow.Count())
+            while (i < listaUczniow.Count())
             {
                 if (listaUczniow[i].login == login && listaUczniow[i].haslo == haslo)
                     return listaUczniow[i];
@@ -112,7 +112,7 @@ namespace SzkolaJezykowaIO
         public Prowadzacy ZalogujProwadzacego(string login, string haslo)
         {
             int i = 0;
-            while (i<listaProwadzacych.Count())
+            while (i < listaProwadzacych.Count())
             {
                 if (listaProwadzacych[i].login == login && listaProwadzacych[i].haslo == haslo)
                     return listaProwadzacych[i];
@@ -130,6 +130,11 @@ namespace SzkolaJezykowaIO
         }
 
         private void PanelLogowania_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PanelLogowania_Load_1(object sender, EventArgs e)
         {
 
         }

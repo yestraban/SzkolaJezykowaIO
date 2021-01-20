@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{80EE788B-67F9-4B83-B316-B69A0C321D04}</ProjectGuid>
+    <ProjectGuid>{B48E39CC-FFA4-4B55-9738-1F1EA53277EB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>SzkolaJezykowaIO</RootNamespace>
     <AssemblyName>SzkolaJezykowaIO</AssemblyName>
@@ -45,17 +45,16 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="SzkolaJezykowaIO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>bin\Debug\SzkolaJezykowaIO.exe</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.cs" />
-    <Compile Include="PanelProwadzacego.cs">
+    <Compile Include="Ocena.cs" />
+    <Compile Include="Grupa.cs" />
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PanelProwadzacego.Designer.cs">
-      <DependentUpon>PanelProwadzacego.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Harmonogram.cs">
       <SubType>Form</SubType>
@@ -63,28 +62,30 @@
     <Compile Include="Harmonogram.Designer.cs">
       <DependentUpon>Harmonogram.cs</DependentUpon>
     </Compile>
+    <Compile Include="Osoba.cs" />
     <Compile Include="PanelAdmina.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PanelAdmina.Designer.cs">
       <DependentUpon>PanelAdmina.cs</DependentUpon>
     </Compile>
-    <Compile Include="PanelUcznia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PanelUcznia.Designer.cs">
-      <DependentUpon>PanelUcznia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ocena.cs" />
-    <Compile Include="Prowadzacy.cs" />
-    <Compile Include="Grupa.cs" />
-    <Compile Include="Osoba.cs" />
-    <Compile Include="Uczen.cs" />
     <Compile Include="PanelLogowaniaForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PanelLogowaniaForm.Designer.cs">
       <DependentUpon>PanelLogowaniaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelProwadzacego.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelProwadzacego.Designer.cs">
+      <DependentUpon>PanelProwadzacego.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelUcznia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelUcznia.Designer.cs">
+      <DependentUpon>PanelUcznia.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -94,11 +95,10 @@
     <Compile Include="PanelLogowania.Designer.cs">
       <DependentUpon>PanelLogowania.cs</DependentUpon>
     </Compile>
+    <Compile Include="Prowadzacy.cs" />
+    <Compile Include="Uczen.cs" />
     <Compile Include="ZadanieDomowe.cs" />
     <Compile Include="Zajecia.cs" />
-    <EmbeddedResource Include="PanelProwadzacego.resx">
-      <DependentUpon>PanelProwadzacego.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Harmonogram.resx">
       <DependentUpon>Harmonogram.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PanelLogowaniaForm.resx">
       <DependentUpon>PanelLogowaniaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelProwadzacego.resx">
+      <DependentUpon>PanelProwadzacego.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PanelUcznia.resx">
       <DependentUpon>PanelUcznia.cs</DependentUpon>

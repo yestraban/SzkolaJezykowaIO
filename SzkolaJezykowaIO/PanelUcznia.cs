@@ -22,9 +22,9 @@ namespace SzkolaJezykowaIO
             label2.Text = uczen.imie + " " + uczen.nazwisko;
             label3.Text = "grupy: \n";
             uczen.grupa.ForEach(delegate (Grupa grupa)
-                {
-                    label3.Text += (grupa.nazwa + " \n");
-                });
+            {
+                label3.Text += (grupa.nazwa + " \n");
+            });
         }
 
         private void PanelUcznia_Load(object sender, EventArgs e)
@@ -42,13 +42,13 @@ namespace SzkolaJezykowaIO
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            if(uczen.listaOcen == null)
+            if (uczen.listaOcen == null)
             {
                 MessageBox.Show("Brak ocen do wyświetlenia");
             }
             else
             {
-                string listaOcenString="";
+                string listaOcenString = "";
                 uczen.listaOcen.ForEach(delegate (Ocena ocena)
                 {
                     listaOcenString += (ocena.opis + ": " + ocena.wartosc + " (waga: " + ocena.waga + ")\n");

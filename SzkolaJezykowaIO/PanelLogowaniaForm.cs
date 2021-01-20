@@ -13,14 +13,14 @@ namespace SzkolaJezykowaIO
 {
     public partial class PanelLogowaniaForm : Form
     {
-        public PanelLogowania panel= new PanelLogowania();
+        public PanelLogowania panel = new PanelLogowania();
 
         public PanelLogowaniaForm()
         {
             InitializeComponent();
-            
-           // MessageBox.Show("Witaj w Szkole Językowej eMKa");
-           // MessageBox.Show("Zaloguj się na swoje konto");
+
+            // MessageBox.Show("Witaj w Szkole Językowej eMKa");
+            // MessageBox.Show("Zaloguj się na swoje konto");
 
         }
 
@@ -34,21 +34,21 @@ namespace SzkolaJezykowaIO
             };
             comboBox1.Items.AddRange(rodzajKonta);                  //dodanie opcji do comboboxa
 
-            
+
         }
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
             int a = comboBox1.SelectedIndex;            //zebranie indeksu wybranej opcji z comboboxa
 
-            if(a==0)
+            if (a == 0)
             {
-                Uczen uczen = panel.ZalogujUcznia(textBox1.Text,textBox2.Text);
+                Uczen uczen = panel.ZalogujUcznia(textBox1.Text, textBox2.Text);
                 if (uczen == null)
                     MessageBox.Show("Podano nieprawidlowe dane");
                 else
@@ -58,10 +58,10 @@ namespace SzkolaJezykowaIO
                     panelUcznia.Show();
                     this.Hide();
                 }
-               
+
             }
 
-            else if(a == 1)
+            else if (a == 1)
             {
                 Prowadzacy prowadzacy = panel.ZalogujProwadzacego(textBox1.Text, textBox2.Text);
                 if (prowadzacy == null)
@@ -78,7 +78,7 @@ namespace SzkolaJezykowaIO
 
             else if (a == 2)
             {
-               panel.czyZalogowanyAdmin = panel.ZalogujAdmina(textBox1.Text, textBox2.Text);
+                panel.czyZalogowanyAdmin = panel.ZalogujAdmina(textBox1.Text, textBox2.Text);
                 if (panel.czyZalogowanyAdmin == false)
                     MessageBox.Show("Podano nieprawidlowe dane");
                 else

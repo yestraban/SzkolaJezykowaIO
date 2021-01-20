@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace SzkolaJezykowaIO
 {
-     public struct Oczekujacy
+    public struct Oczekujacy
     {
-       public Uczen uczen;
-       public string poziomZaawansowania;
-       public string jezyk;
+        public Uczen uczen;
+        public string poziomZaawansowania;
+        public string jezyk;
     }
     public class Admin
     {
         public string login;
         public string haslo;
-        public List<Oczekujacy> listaOczekujacych= new List<Oczekujacy>();
+        public List<Oczekujacy> listaOczekujacych = new List<Oczekujacy>();
 
         public Admin(string login, string haslo) //konstruktor inicjujący
         {
