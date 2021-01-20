@@ -111,14 +111,24 @@ namespace SzkolaJezykowaIO
             if (comboBox1.SelectedIndex >= 0 && comboBox2.SelectedIndex >= 0)
             {
                 Ocena ocenaDoZmiany = prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex].listaOcen[comboBox3.SelectedIndex];
-                double wartosc = Convert.ToDouble(Interaction.InputBox("podaj wartość"));
-                double waga = Convert.ToDouble(Interaction.InputBox("podaj wagę"));
-                string opis = Interaction.InputBox("podaj opis oceny");
-                ocenaDoZmiany.wartosc = wartosc;
-                ocenaDoZmiany.waga = waga;
-                ocenaDoZmiany.opis = opis;
-                prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex].listaOcen[comboBox3.SelectedIndex] = ocenaDoZmiany;
-                MessageBox.Show("Ocena została zmieniona");
+                string wartoscString = Interaction.InputBox("podaj wartość");
+                string wagaString = Interaction.InputBox("podaj wagę");
+
+                if (wartoscString.Length > 0 && wagaString.Length > 0)
+                {
+                    double wartosc = Convert.ToDouble(wartoscString);
+                    double waga = Convert.ToDouble(wagaString);
+                    string opis = Interaction.InputBox("podaj opis oceny");
+
+                    ocenaDoZmiany.wartosc = wartosc;
+                    ocenaDoZmiany.waga = waga;
+                    ocenaDoZmiany.opis = opis;
+                    prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex].listaOcen[comboBox3.SelectedIndex] = ocenaDoZmiany;
+                    MessageBox.Show("Ocena została zmieniona");
+                }
+                else
+                    MessageBox.Show("Nie udało się dodać oceny");
+                
             }
             else
                 MessageBox.Show("Nie udało się zmienić oceny");

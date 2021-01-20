@@ -48,6 +48,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.cs" />
+    <Compile Include="DodajUczniaDoGrupyForm.cs" />
+    <Compile Include="DodajUczniaDoGrupyForm.Designer.cs">
+      <DependentUpon>DodajUczniaDoGrupyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EdytujGrupeForm.cs" />
+    <Compile Include="EdytujGrupeForm.Designer.cs">
+      <DependentUpon>EdytujGrupeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ocena.cs" />
     <Compile Include="Grupa.cs" />
     <Compile Include="Form1.cs">
@@ -97,8 +105,26 @@
     </Compile>
     <Compile Include="Prowadzacy.cs" />
     <Compile Include="Uczen.cs" />
+    <Compile Include="UsunGrupe.cs" />
+    <Compile Include="UsunGrupe.Designer.cs">
+      <DependentUpon>UsunGrupe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsunProwadzacego.cs" />
+    <Compile Include="UsunProwadzacego.Designer.cs">
+      <DependentUpon>UsunProwadzacego.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsunUcznia.cs" />
+    <Compile Include="UsunUcznia.Designer.cs">
+      <DependentUpon>UsunUcznia.cs</DependentUpon>
+    </Compile>
     <Compile Include="ZadanieDomowe.cs" />
     <Compile Include="Zajecia.cs" />
+    <EmbeddedResource Include="DodajUczniaDoGrupyForm.resx">
+      <DependentUpon>DodajUczniaDoGrupyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EdytujGrupeForm.resx">
+      <DependentUpon>EdytujGrupeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Harmonogram.resx">
       <DependentUpon>Harmonogram.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +152,15 @@
     </Compile>
     <EmbeddedResource Include="PanelLogowania.resx">
       <DependentUpon>PanelLogowania.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsunGrupe.resx">
+      <DependentUpon>UsunGrupe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsunProwadzacego.resx">
+      <DependentUpon>UsunProwadzacego.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsunUcznia.resx">
+      <DependentUpon>UsunUcznia.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
