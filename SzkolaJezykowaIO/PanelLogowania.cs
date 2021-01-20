@@ -47,7 +47,7 @@ namespace SzkolaJezykowaIO
             listaGrup.Add(new Grupa("hiszpanski", "podstawowy", "hiszp_podstawowy", listaProwadzacych[1],
                 new List<Uczen> {listaUczniow[5], listaUczniow[6], listaUczniow[7], listaUczniow[8], listaUczniow[0]}));
             listaGrup.Add(new Grupa("angielski", "rozszerzony", "ang_rozszerzony", listaProwadzacych[2],
-                new List<Uczen> { listaUczniow[0], listaUczniow[3], listaUczniow[4], listaUczniow[5]}));
+                new List<Uczen> {listaUczniow[3], listaUczniow[4], listaUczniow[5]}));
             listaGrup.Add(new Grupa("niemiecki", "podstawowy", "niem_rozszerzony", listaProwadzacych[3],
                 new List<Uczen> {listaUczniow[1], listaUczniow[9], listaUczniow[10], listaUczniow[2]}));
             listaUczniow[0].grupa.Add(listaGrup[0]);
