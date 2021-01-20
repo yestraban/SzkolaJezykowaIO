@@ -18,7 +18,7 @@ namespace SzkolaJezykowaTesty
 
             Uczen uczen = new Uczen("Jakub2015", "qwerty", "Stanislaw", "Marek", 1);
 
-            uczen = a.zalogujUcznia("abc", "123");
+            uczen = a.ZalogujUcznia("abc", "123");
 
             Assert.AreEqual(uczen.imie, "Stanislaw");
 
@@ -32,7 +32,7 @@ namespace SzkolaJezykowaTesty
 
             Uczen uczen = new Uczen("Pan_pawel", "duzybul", "Aleksander", "Wielki", 6);
 
-            uczen = a.zalogujUcznia("Pan_pawel", "duzybul");
+            uczen = a.ZalogujUcznia("Pan_pawel", "duzybul");
 
             Assert.AreEqual(uczen.imie, "Aleksander");
 
@@ -47,7 +47,7 @@ namespace SzkolaJezykowaTesty
 
             Uczen uczen = new Uczen("Jakub2015", "qwerty", "Stanislaw", "Marek", 1);
 
-            uczen = a.zalogujUcznia("login", "haslo");
+            uczen = a.ZalogujUcznia("login", "haslo");
 
             Assert.AreEqual(uczen, null);
 
@@ -62,7 +62,7 @@ namespace SzkolaJezykowaTesty
 
             Prowadzacy prowadzacy = new Prowadzacy("Squirtle123", "pikachu", "Grzegorz", "Adamiakowa", 1);
 
-            prowadzacy = a.zalogujProwadzacego("Squirtle123", "pikachu");
+            prowadzacy = a.ZalogujProwadzacego("Squirtle123", "pikachu");
 
             Assert.AreEqual(prowadzacy.imie, "Grzegorz");
 
@@ -73,7 +73,7 @@ namespace SzkolaJezykowaTesty
         {
             PanelLogowania a = new PanelLogowania();
 
-            a.czyZalogowanyAdmin = a.zalogujAdmina("szkolajezykowa", "admin123");
+            a.czyZalogowanyAdmin = a.ZalogujAdmina("szkolajezykowa", "admin123");
 
             Assert.IsTrue(a.czyZalogowanyAdmin);
         }
@@ -83,7 +83,7 @@ namespace SzkolaJezykowaTesty
         {
             PanelLogowania a = new PanelLogowania();
 
-            a.czyZalogowanyAdmin = a.zalogujAdmina("random", "random");
+            a.czyZalogowanyAdmin = a.ZalogujAdmina("random", "random");
 
             Assert.IsFalse(a.czyZalogowanyAdmin);
         }
@@ -118,7 +118,7 @@ namespace SzkolaJezykowaTesty
 
 
         [TestMethod]
-        public void edycjaGrupy()
+        public void EdycjaGrupy()
         {
             PanelLogowania a = new PanelLogowania();
             Uczen uczen = new Uczen("Jakub2015", "qwerty", "Stanislaw", "Marek", 1);
@@ -131,7 +131,7 @@ namespace SzkolaJezykowaTesty
         }
 
         [TestMethod]
-        public void zlozZadanieDoOceny()
+        public void ZlozZadanieDoOceny()
         {
             PanelLogowania a = new PanelLogowania();
             Uczen uczen = new Uczen("Jakub2015", "qwerty", "Stanislaw", "Marek", 1);
