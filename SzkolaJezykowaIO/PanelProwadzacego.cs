@@ -66,7 +66,15 @@ namespace SzkolaJezykowaIO
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("praca w toku");
+            Uczen uczenDoWyswietlenia = prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex];
+            string listaOcenString = "";
+            uczenDoWyswietlenia.listaOcen.ForEach(delegate (Ocena ocena)
+            {
+                listaOcenString += (ocena.opis + ": " + ocena.wartosc + " (waga: " + ocena.waga + ")\n");
+            });
+        
+
+            MessageBox.Show(uczenDoWyswietlenia.imie+" " +uczenDoWyswietlenia.nazwisko+"\nid:"+ uczenDoWyswietlenia.id+"\ngrupa: "+ prowadzacy.grupa[0]+"\nOceny:\n"+listaOcenString);
         }
 
         private void button2_Click(object sender, EventArgs e)
