@@ -37,6 +37,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -107,24 +108,36 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(404, 82);
+            this.comboBox1.Location = new System.Drawing.Point(352, 82);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(143, 33);
+            this.comboBox1.Size = new System.Drawing.Size(196, 33);
             this.comboBox1.TabIndex = 7;
+            this.comboBox1.Text = "Wybierz grupę";
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(646, 84);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(168, 33);
+            this.comboBox2.Size = new System.Drawing.Size(191, 33);
             this.comboBox2.TabIndex = 8;
+            this.comboBox2.Text = "Wybierz ucznia";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(938, 84);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(206, 33);
+            this.comboBox3.TabIndex = 9;
+            this.comboBox3.Text = "Wybierz ocenę";
             // 
             // PanelProwadzacego
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1388, 657);
+            this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button4);
@@ -152,5 +165,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }
