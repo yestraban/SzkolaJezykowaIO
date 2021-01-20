@@ -96,7 +96,7 @@ namespace SzkolaJezykowaIO
 
 
 
-        public Uczen zalogujUcznia(string login, string haslo)
+        public Uczen ZalogujUcznia(string login, string haslo)
         {
             int i = 0;
             while(i<listaUczniow.Count())
@@ -109,7 +109,7 @@ namespace SzkolaJezykowaIO
         }
 
 
-        public Prowadzacy zalogujProwadzacego(string login, string haslo)
+        public Prowadzacy ZalogujProwadzacego(string login, string haslo)
         {
             int i = 0;
             while (i<listaProwadzacych.Count())
@@ -121,7 +121,7 @@ namespace SzkolaJezykowaIO
             return null;
         }
 
-        public bool zalogujAdmina(string login, string haslo)
+        public bool ZalogujAdmina(string login, string haslo)
         {
             if (login == admin.login && haslo == admin.haslo)
                 return true;
