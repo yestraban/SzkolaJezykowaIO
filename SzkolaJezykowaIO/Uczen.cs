@@ -16,11 +16,6 @@ namespace SzkolaJezykowaIO
         {
 
         }
-
-        public void zapiszNaZajecia()
-        { }
-
-
         public void zlozZadanieDoOceny(string tresc, string tytul)
         {
             ZadanieDomowe zadanie = new ZadanieDomowe(tresc, tytul);

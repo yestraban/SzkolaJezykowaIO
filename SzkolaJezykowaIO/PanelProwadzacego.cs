@@ -39,6 +39,7 @@ namespace SzkolaJezykowaIO
                 foreach (Uczen ucz in prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow)
                 {
                     comboBox2.Items.Add(ucz.imie + " " + ucz.nazwisko);
+                    
                 }
             }
             else

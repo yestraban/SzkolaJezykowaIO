@@ -17,7 +17,7 @@ namespace SzkolaJezykowaIO
         public Grupa(string jezyk, string poziomZaawansowania, string nazwa, Prowadzacy prowadzacy,
             List<Uczen> listaUczniow)
         {
-            // konstruktor inicjujący
+            // konstruktor parametryzujacy
             this.jezyk = jezyk;
             this.poziomZaawansowania = poziomZaawansowania;
             this.nazwa = nazwa;

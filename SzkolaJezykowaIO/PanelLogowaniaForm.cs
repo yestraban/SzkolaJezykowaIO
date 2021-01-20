@@ -87,7 +87,7 @@ namespace SzkolaJezykowaIO
                     PanelAdmina panelAdmina = new PanelAdmina(panel.admin);
                     panelAdmina.Show();
                     this.Hide();
-                }
+                } //logowanie uzytkownia w zaleznosci od wybranego rodzaju konta
             }
         }
 
@@ -95,6 +95,7 @@ namespace SzkolaJezykowaIO
         {
             Harmonogram harmonogram = new Harmonogram();
             harmonogram.Show();
+            //pokazywanie pliku jpg
         }
         // comboBox1.SelectedIndex.ToString()
 

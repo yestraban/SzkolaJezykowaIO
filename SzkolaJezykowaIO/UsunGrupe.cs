@@ -12,6 +12,7 @@ namespace SzkolaJezykowaIO
 {
     public partial class UsunGrupe : Form
     {
+        //specjalne okno do usuniecia grupy dostepne tylko dla admina 
         public PanelLogowania panel = new PanelLogowania();
         public Admin admin;
         public UsunGrupe(Admin podajAdmina)

@@ -17,6 +17,7 @@ namespace SzkolaJezykowaIO
         public Admin admin;
         public UsunProwadzacego(Admin podajAdmina)
         {
+            //specjalne okno usuwajace prowadzacego z systemu dostepne tylko dla admina
             admin = podajAdmina;
             InitializeComponent();
             foreach (Prowadzacy prowadzacy in panel.listaProwadzacych)

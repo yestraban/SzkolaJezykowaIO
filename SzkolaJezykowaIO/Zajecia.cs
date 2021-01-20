@@ -10,6 +10,7 @@
 
         public Zajecia(string dzien_tygodnia, string godzina, string sala, string nazwa_zajec, Grupa grupa)
         {
+            //konstruktor parametryzujacy
             this.dzien_tygodnia = dzien_tygodnia;
             this.godzina = godzina;
             this.sala = sala;

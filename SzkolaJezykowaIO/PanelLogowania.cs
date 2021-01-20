@@ -98,6 +98,7 @@ namespace SzkolaJezykowaIO
 
         public Uczen ZalogujUcznia(string login, string haslo)
         {
+            //sprawdzanie poprawnosci hasel i loginow przy logowaniu
             int i = 0;
             while(i<listaUczniow.Count())
             {
@@ -111,6 +112,7 @@ namespace SzkolaJezykowaIO
 
         public Prowadzacy ZalogujProwadzacego(string login, string haslo)
         {
+            //sprawdzanie poprawnosci hasel i loginow przy logowaniu
             int i = 0;
             while (i<listaProwadzacych.Count())
             {
@@ -123,6 +125,7 @@ namespace SzkolaJezykowaIO
 
         public bool ZalogujAdmina(string login, string haslo)
         {
+            //sprawdzanie poprawnosci hasel i loginow przy logowaniu
             if (login == admin.login && haslo == admin.haslo)
                 return true;
             else
@@ -131,6 +134,7 @@ namespace SzkolaJezykowaIO
 
         private void PanelLogowania_Load(object sender, EventArgs e)
         {
+            //ladowanie panelu logowania
 
         }
     }

@@ -18,7 +18,7 @@ namespace SzkolaJezykowaIO
 
         protected Osoba(string login, string haslo, string imie, string nazwisko, int id, List<Grupa> grupa)
         {
-            // konstruktor inicjujący
+            // konstruktor parametryzujacy
             this.login = login;
             this.haslo = haslo;
             this.imie = imie;

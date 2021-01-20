@@ -14,6 +14,7 @@ namespace SzkolaJezykowaIO
     
     public partial class EdytujGrupeForm : Form
     {
+        //specjalny panel dla admina, wiadomosci wyswietlane poprzez message box dobrze opisuja poszczegolne funkcje
         public PanelLogowania panel = new PanelLogowania();
         public Admin admin;
         public EdytujGrupeForm(Admin podajAdmina)

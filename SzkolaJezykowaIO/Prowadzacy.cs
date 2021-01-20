@@ -11,15 +11,8 @@ namespace SzkolaJezykowaIO
         public Prowadzacy(string login, string haslo, string imie,
         string nazwisko, int id, List<Grupa> grupa = null) : base(login, haslo, imie, nazwisko, id, grupa)
         { }
-
-        void wyswietlUcznia()
-        {
-            //najpierw oceny, zajecia do zrobienia
-        }
-        
         void dodajOcene(Uczen uczen)
         {
-
             System.Console.WriteLine("Podaj ocenę");
             double wartosc = Convert.ToDouble(Console.ReadLine());
             System.Console.WriteLine("Podaj wagę oceny");

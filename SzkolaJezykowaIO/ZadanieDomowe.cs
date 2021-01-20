@@ -8,6 +8,7 @@ namespace SzkolaJezykowaIO
 {
     public class ZadanieDomowe
     {
+        //prosta obsluga zadan domowych
         public string tresc;
         public string tytul;
 

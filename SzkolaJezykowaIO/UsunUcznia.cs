@@ -16,6 +16,7 @@ namespace SzkolaJezykowaIO
         public Admin admin;
         public UsunUcznia(Admin podajAdmina)
         {
+            //specjalnie okno dostepne tylko dla admina pozwalajace usunac ucznia z systemu
             admin = podajAdmina;
             InitializeComponent();
             foreach (Uczen uczen in panel.listaUczniow)

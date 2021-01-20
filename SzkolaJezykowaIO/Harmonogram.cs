@@ -12,6 +12,7 @@ namespace SzkolaJezykowaIO
 {
     public partial class Harmonogram : Form
     {
+        //wyswietlanie obrazka w nowym oknie
         public Harmonogram()
         {
             InitializeComponent();

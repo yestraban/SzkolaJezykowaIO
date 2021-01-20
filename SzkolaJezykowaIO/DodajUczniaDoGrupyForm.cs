@@ -12,6 +12,7 @@ namespace SzkolaJezykowaIO
 {
     public partial class DodajUczniaDoGrupyForm : Form
     {
+        //dodawanie ucznia z listy oczekujacych do istniejacej grupy
         public PanelLogowania panel = new PanelLogowania();
         public Admin admin;
         public DodajUczniaDoGrupyForm(Admin podajAdmina)
