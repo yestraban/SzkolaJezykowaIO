@@ -66,52 +66,78 @@ namespace SzkolaJezykowaIO
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Uczen uczenDoWyswietlenia = prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex];
-            string listaOcenString = "";
-            uczenDoWyswietlenia.listaOcen.ForEach(delegate (Ocena ocena)
+            if (comboBox1.SelectedIndex >= 0 && comboBox2.SelectedIndex >= 0)
             {
-                listaOcenString += (ocena.opis + ": " + ocena.wartosc + " (waga: " + ocena.waga + ")\n");
-            });
+                Uczen uczenDoWyswietlenia = prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex];
+                string listaOcenString = "";
+                uczenDoWyswietlenia.listaOcen.ForEach(delegate (Ocena ocena)
+                {
+                    listaOcenString += (ocena.opis + ": " + ocena.wartosc + " (waga: " + ocena.waga + ")\n");
+                });
 
 
-            MessageBox.Show(uczenDoWyswietlenia.imie + " " + uczenDoWyswietlenia.nazwisko + "\nid:" + uczenDoWyswietlenia.id + "\ngrupa: " + prowadzacy.grupa[0] + "\nOceny:\n" + listaOcenString);
+                MessageBox.Show(uczenDoWyswietlenia.imie + " " + uczenDoWyswietlenia.nazwisko + "\nid:" + uczenDoWyswietlenia.id + "\ngrupa: " + prowadzacy.grupa[0] + "\nOceny:\n" + listaOcenString);
+            }
+            else
+                MessageBox.Show("Nie udało się wyświetlić ucznia");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (comboBox1.SelectedIndex >= 0 && comboBox2.SelectedIndex >= 0)
+            {
+                Uczen uczenDoOceny = prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex];
 
-            Uczen uczenDoOceny = prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex];
+                string wartoscString = Interaction.InputBox("podaj wartość");
+                string wagaString = Interaction.InputBox("podaj wagę");
 
+                if (wartoscString.Length > 0 && wagaString.Length > 0)
+                {
+                    double wartosc = Convert.ToDouble(wartoscString);
+                    double waga = Convert.ToDouble(wagaString);
+                    string opis = Interaction.InputBox("podaj opis oceny");
 
-            double wartosc = Convert.ToDouble(Interaction.InputBox("podaj wartość"));
-            double waga = Convert.ToDouble(Interaction.InputBox("podaj wagę"));
-            string opis = Interaction.InputBox("podaj opis oceny");
-
-            uczenDoOceny.listaOcen.Add(new Ocena(wartosc, waga, opis));
-            MessageBox.Show("Ocena została dodana");
+                    uczenDoOceny.listaOcen.Add(new Ocena(wartosc, waga, opis));
+                    MessageBox.Show("Ocena została dodana");
+                }
+                else
+                    MessageBox.Show("Nie udało się dodać oceny");
+            }
+            else
+                MessageBox.Show("Nie udało się dodać oceny");
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            Ocena ocenaDoZmiany = prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex].listaOcen[comboBox3.SelectedIndex];
-            double wartosc = Convert.ToDouble(Interaction.InputBox("podaj wartość"));
-            double waga = Convert.ToDouble(Interaction.InputBox("podaj wagę"));
-            string opis = Interaction.InputBox("podaj opis oceny");
-            ocenaDoZmiany.wartosc = wartosc;
-            ocenaDoZmiany.waga = waga;
-            ocenaDoZmiany.opis = opis;
-            prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex].listaOcen[comboBox3.SelectedIndex] = ocenaDoZmiany;
-            MessageBox.Show("Ocena została zmieniona");
+            if (comboBox1.SelectedIndex >= 0 && comboBox2.SelectedIndex >= 0)
+            {
+                Ocena ocenaDoZmiany = prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex].listaOcen[comboBox3.SelectedIndex];
+                double wartosc = Convert.ToDouble(Interaction.InputBox("podaj wartość"));
+                double waga = Convert.ToDouble(Interaction.InputBox("podaj wagę"));
+                string opis = Interaction.InputBox("podaj opis oceny");
+                ocenaDoZmiany.wartosc = wartosc;
+                ocenaDoZmiany.waga = waga;
+                ocenaDoZmiany.opis = opis;
+                prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex].listaOcen[comboBox3.SelectedIndex] = ocenaDoZmiany;
+                MessageBox.Show("Ocena została zmieniona");
+            }
+            else
+                MessageBox.Show("Nie udało się zmienić oceny");
         }
         private void button4_Click(object sender, EventArgs e)// wyświetla najnowsze zadanie
         {
-            Uczen uczenDoOceny = prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex];
-            if (uczenDoOceny.listaZadan.Count != 0)
+            if (comboBox1.SelectedIndex >= 0 && comboBox2.SelectedIndex >= 0)
             {
-                ZadanieDomowe zad = uczenDoOceny.listaZadan[uczenDoOceny.listaZadan.Count - 1];
-                MessageBox.Show("Tytuł zadania: " + zad.tytul + "\nTreść: " + zad.tresc);
+                Uczen uczenDoOceny = prowadzacy.grupa[comboBox1.SelectedIndex].listaUczniow[comboBox2.SelectedIndex];
+                if (uczenDoOceny.listaZadan.Count != 0)
+                {
+                    ZadanieDomowe zad = uczenDoOceny.listaZadan[uczenDoOceny.listaZadan.Count - 1];
+                    MessageBox.Show("Tytuł zadania: " + zad.tytul + "\nTreść: " + zad.tresc);
+                }
+                else
+                    MessageBox.Show("Brak zadań do wyświetlenia");
             }
             else
-                MessageBox.Show("Brak zadań do wyświetlenia");
+                MessageBox.Show("Nie udało się wyświetlić zadania");
         }
     }
 }
