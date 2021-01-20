@@ -1,2 +1,0 @@
-# SzkolaJezykowaIO
-# Hello world

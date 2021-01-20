@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E3ACA022-E4D4-4F1E-B5A4-4FA873EF9E63}</ProjectGuid>
+    <ProjectGuid>{B1833A74-5EE9-4CE6-AFD6-1231C1BA421D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SzkolaJezykowaTesty</RootNamespace>
-    <AssemblyName>SzkolaJezykowaTesty</AssemblyName>
+    <RootNamespace>Testy</RootNamespace>
+    <AssemblyName>Testy</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
