@@ -20,6 +20,11 @@ namespace SzkolaJezykowaIO
             InitializeComponent();
             uczen = podajUcznia;
             label2.Text = uczen.imie + " " + uczen.nazwisko;
+            label3.Text = "grupy: \n";
+            uczen.grupa.ForEach(delegate (Grupa grupa)
+                {
+                    label3.Text += (grupa.nazwa + " \n");
+                });
         }
 
         private void PanelUcznia_Load(object sender, EventArgs e)
@@ -52,9 +57,14 @@ namespace SzkolaJezykowaIO
             }
         }
 
-        private void Button3_Click(object sender, EventArgs e)
+
+        private void Button3_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            string jezyk = Interaction.InputBox("podaj język");
+            string poziomZaawansowania = Interaction.InputBox("podaj poziom zaawansowania");
+            panel.admin.dodajNaListe(uczen, jezyk, poziomZaawansowania);
+
+            MessageBox.Show("Dodano na listę oczekujących");
         }
     }
 }

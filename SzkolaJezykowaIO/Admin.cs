@@ -6,22 +6,31 @@ using System.Threading.Tasks;
 
 namespace SzkolaJezykowaIO
 {
+     public struct Oczekujacy
+    {
+       public Uczen uczen;
+       public string poziomZaawansowania;
+       public string jezyk;
+    }
     public class Admin
     {
         public string login;
         public string haslo;
-        public List<Uczen> listaOczekujacych;
+        public List<Oczekujacy> listaOczekujacych= new List<Oczekujacy>();
 
         public Admin(string login, string haslo) //konstruktor inicjujący
         {
             this.login = login;
             this.haslo = haslo;
-            this.listaOczekujacych = new List<Uczen>();
         }
 
-        public void dodajNaListe(Uczen uczen)
+        public void dodajNaListe(Uczen uczen, string jezyk, string poziom)
         {
-            this.listaOczekujacych.Add(uczen);
+            Oczekujacy nowy = new Oczekujacy();
+            nowy.uczen = uczen;
+            nowy.jezyk = jezyk;
+            nowy.poziomZaawansowania = poziom;
+            this.listaOczekujacych.Add(nowy);
         }
 
         public void dodajDoGrupy(Uczen uczen, Grupa grupa)

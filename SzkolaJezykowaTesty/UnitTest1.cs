@@ -95,9 +95,9 @@ namespace SzkolaJezykowaTesty
 
             Uczen uczen = new Uczen("Jakub2015", "qwerty", "Stanislaw", "Marek", 1);
 
-            a.admin.dodajNaListe(uczen);
+            a.admin.dodajNaListe(uczen, "angielski","podstawowy");
 
-            Assert.AreEqual(a.admin.listaOczekujacych[0].imie, "Stanislaw");
+            Assert.AreEqual(a.admin.listaOczekujacych[0].uczen.imie, "Stanislaw");
         }
 
         [TestMethod]
